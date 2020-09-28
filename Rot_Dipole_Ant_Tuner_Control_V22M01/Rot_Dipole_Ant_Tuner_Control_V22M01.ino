@@ -22,7 +22,7 @@
 //#define DEBUG
 #define RIG    // Если CAT система используется
 #define YAESU  //Закомментируйте, если у Вас ICOM
-//#define ICOM
+
 
 /**********************Arduino Pin Definition************************/
 
