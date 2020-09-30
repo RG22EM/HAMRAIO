@@ -17,7 +17,9 @@
  */
 /*****************************************************************************/
 
+
 #define SERIAL_ON       // Serial ON  if "//" Serial OFF
+
 #define LCD_I2C
 //#define DEBUG
 #define RIG    // Если CAT система используется
@@ -386,11 +388,11 @@ void loop()
 //if(millis() - cat_millis >= recycle){
 //Serial.print("FREQ = ");
 //Serial.println(radio.getFreqMode());
-/* *
+/* начало блока *
     Radio CAT port GND -> Arduino GND
     Radio CAT port TX  -> Arduino pin 3
     Radio CAT port RX  -> Arduino pin 2
-/* */
+/ * конец блока */
 cat_millis = millis();
 //}
 #endif
@@ -489,7 +491,7 @@ cat_millis = millis();
                     } else
                       if (((band >= 900) && (band < 946)) && ((band_1 >= 900) && (band_1 < 946)))   // Save Memory EEPROM
                       {
-                        /* */
+                        /* для отладки начало блока */
                  lcd.setCursor(10, 1);
                  lcd.print("M+");
                  EEPROM.put(band_sel, posn_L);
@@ -505,7 +507,7 @@ cat_millis = millis();
                  delay(2000);
                  lcd.setCursor(10, 1);
                  lcd.print("  ");
-                 /* */
+                 /* конец блока */
                  }else
                   if (((band >= 946) && (band < 1023)) && ((band_1 >= 946) && (band_1 < 1023)))   // STOP
                       {
